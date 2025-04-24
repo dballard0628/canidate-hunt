@@ -57,6 +57,7 @@ const CandidateSearch = () => {
   }
 
   const candidate = searchResult || candidates[currentIndex];
+  console.log('candidate; ', candidate);
 
   return (
     <div className="candidate-container">
@@ -76,12 +77,12 @@ const CandidateSearch = () => {
       </div>
       <img src={candidate.avatar_url} alt={candidate.login} />
       <div className="candidate-details">
-        <p>Name: {candidate.name || 'N/A'}</p>
+        <p>Name: {candidate.name || 'Not provided by user'}</p>
         <p>Username: {candidate.login}</p>
-        <p>Location: {candidate.location || 'N/A'}</p>
-        <p>Email: {candidate.email || 'N/A'}</p>
-        <p>Company: {candidate.company || 'N/A'}</p>
-        <p>Bio: {candidate.bio || 'N/A'}</p>
+        <p>Location: {candidate.location || 'Not provided by user'}</p>
+        <p>Email: {candidate.email || 'Not provided by user'}</p>
+        <p>Company: {candidate.company || 'Not provided by user'}</p>
+        <p>Bio: {candidate.bio || 'Not provided by user'}</p>
         <p>
           Profile: <a href={candidate.html_url}>{candidate.html_url}</a>
         </p>
